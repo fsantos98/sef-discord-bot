@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, ChannelType, TextChannel, EmbedBuilder } from "discord.js"
 import { SlashCommand } from "../types";
 
-const testCommand: SlashCommand = {
+const gc_models: SlashCommand = {
     command: new SlashCommandBuilder()
         .setName("modelos")
         .setDescription("Test command")
@@ -24,4 +24,4 @@ const testCommand: SlashCommand = {
     cooldown: 3
 }
 
-export default testCommand;
+export default gc_models;
