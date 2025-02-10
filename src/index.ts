@@ -15,7 +15,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import testCommand from "./slashCommands/ping";
 import gc_models from "./slashCommands/gc_modelos";
-import pps from "./slashCommands/pp";
+import pps from "./slashCommands/pps";
 
 const token = process.env.DISCORD_TOKEN; // Token from Railway Env Variable.
 const client_id = process.env.CLIENT_ID;
