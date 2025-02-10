@@ -4,7 +4,7 @@ import { SlashCommand } from "../types";
 const gc_models: SlashCommand = {
     command: new SlashCommandBuilder()
         .setName("modelos")
-        .setDescription("Test command")
+        .setDescription("Test command 2")
         /*.addStringOption(option => {
             return option
                 .setName("content")
