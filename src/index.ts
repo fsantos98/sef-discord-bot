@@ -15,6 +15,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import testCommand from "./slashCommands/ping";
 import gc_models from "./slashCommands/gc_modelos";
+import pps from "./slashCommands/pp";
 
 const token = process.env.DISCORD_TOKEN; // Token from Railway Env Variable.
 const client_id = process.env.CLIENT_ID;
@@ -33,7 +34,8 @@ console.log("jweqioweqeqww");
 const slashCommands = new Collection<string, SlashCommand>()
 slashCommands.set(testCommand.command.name, testCommand)
 slashCommands.set(gc_models.command.name, gc_models)
-const slashCommandsArr: SlashCommandBuilder[] = [testCommand.command, gc_models.command]
+slashCommands.set(pps.command.name, pps)
+const slashCommandsArr: SlashCommandBuilder[] = [testCommand.command, gc_models.command, pps.command]
 console.log(slashCommandsArr)
 const rest = new REST({ version: "10" }).setToken(token);
 rest.put(Routes.applicationCommands(client_id), {
